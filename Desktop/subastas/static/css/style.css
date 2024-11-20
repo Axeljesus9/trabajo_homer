@@ -1,3 +1,188 @@
-body{
-    background-color: black;
+/* Archivo: style.css */
+
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Fondo suave */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+#one_container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navegación */
+/* Navegación principal */
+nav.nav {
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que siempre esté encima */
+}
+
+/* Links de navegación */
+nav.nav .nav-link {
+    color: #007bff; /* Azul para enlaces */
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 15px; /* Espaciado entre los enlaces */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Suaviza la transición */
+    position: relative; /* Necesario para el efecto */
+}
+
+/* Efecto hover con subrayado animado */
+nav.nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav.nav .nav-link:hover::after {
+    width: 100%; /* La línea se extiende completamente al hacer hover */
+}
+
+nav.nav .nav-link:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Íconos del menú */
+ion-icon {
+    margin-left: 8px;
+    color: #007bff; /* Azul para el ícono */
+    font-size: 1.2rem;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+ion-icon:hover {
+    color: #0056b3;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    nav.nav {
+        padding: 0.5rem;
+    }
+
+    nav.nav .nav-link {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+
+    ion-icon {
+        font-size: 1rem;
+    }
+}
+
+
+/* Carrusel */
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Cambia iconos a blanco */
+}
+
+/* Tarjetas de productos */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Espaciado entre tarjetas */
+.card + .card {
+    margin-top: 2rem;
+}
+
+/* Footer (si planeas agregarlo) */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    #one_container h1 {
+        font-size: 2rem;
+    }
+
+    nav.nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .carousel-inner img {
+        height: 250px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
 }
