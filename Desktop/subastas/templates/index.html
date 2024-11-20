@@ -3,50 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
-    <title>subasta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Subasta</title>
 </head>
 <body>
     <div class="container my-4" id="one_container">
-        <div class="text-center mb-4">Subasta</div>
-        
-        <nav class="nav justify-content-center">
-        <a id="Productos" href="productos" class="nav-link">Producto</a>
-        <a id="live" href="live.html" class="nav-link">Live</a>
-        <a id="perfil" href="perfil"class="nav-link">Perfil</a>
-        </nav>
-        
-
-    </div>
-
-    <div id="oneCorrusel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="image/Designer.jpeg" class="d-block w-100" alt="Imagen 1">
-          </div>
-          </div>
-          <div class="carousel-item">
-            <img src="image/tercer.jpeg" class="d-block w-100" alt="Imagen 3">
-          </div>
-          <div class="carousel-item">
-            <img src="image/cuarta.jpeg" class="d-block w-100" alt="imagen 4">
-          </div>
+        <div class="text-center mb-4">
+            <h1>Subasta</h1>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
 
+        <!-- Barra de navegación -->
+        <nav class="nav justify-content-center">
+            <a href="#productos" class="nav-link">Productos</a>
+            <a id="live" href="live.html" class="nav-link">Live</a>
+            <a id="perfil" href="perfil.html" class="nav-link">Perfil</a>
+            <ion-icon name="person-circle"></ion-icon>
+        </nav>
     </div>
 
-
+    <!-- Carrusel de imágenes -->
+    <div id="oneCorrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#oneCorrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" title="Ir al primer slide"></button>
+            <button type="button" data-bs-target="#oneCorrusel" data-bs-slide-to="1" aria-label="Slide 2" title="Ir al segundo slide"></button>
+            <button type="button" data-bs-target="#oneCorrusel" data-bs-slide-to="2" aria-label="Slide 3" title="Ir al tercer slide"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/Designer.jpeg" class="d-block w-100" alt="Imagen de un diseñador">
+            </div>
+            <div class="carousel-item">
+                <img src="image/cuarta.jpeg" class="d-block w-100" alt="Paisaje tropical">
+            </div>
+            <div class="carousel-item">
+                <img src="image/tercer.jpeg" class="d-block w-100" alt="Imagen artística abstracta">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#oneCorrusel" data-bs-slide="prev" aria-label="Slide anterior" title="Ir al slide anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#oneCorrusel" data-bs-slide="next" aria-label="Siguiente slide" title="Ir al siguiente slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     
+
+    <!-- Productos -->
+    <div class="container my-5" id="#productos">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/file (1).jpg" class="card-img-top img-fluid rounded" alt="Producto 1">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">$2,000</h4>
+                        <p class="card-text">Singapore Travel Guide</p>
+                        <a href="live.html" class="btn btn-primary">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/segunda_reliquia.jpg" class="card-img-top img-fluid rounded" alt="Producto 2">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">$3,000</h4>
+                        <p class="card-text">Shinzen Young</p>
+                        <a href="#" class="btn btn-primary">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/tercer_producto (editado.jpg" class="card-img-top img-fluid rounded" alt="Producto 3">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">$4,000</h4>
+                        <p class="card-text">Bird, Elisha Brown</p>
+                        <a href="#" class="btn btn-primary">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/cuarto_producti (editado.jpg" class="card-img-top img-fluid rounded" alt="producto 4">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" >
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/quinto_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 5">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" title="Comprar Producto 4">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/sexto_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 6">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" title="Comprar Producto 4">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/septimo_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 7">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" title="Comprar Producto 4">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/octavo_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 8">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" title="Comprar Producto 4">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image/noveno_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 9">
+                    <div class="card-body text-center">
+                        <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
+                        <p class="card-text">Jesuita San Andrés Bobola de 1657</p>
+                        <a href="#" class="btn btn-primary" title="Comprar Producto 4">
+                            Comprar
+                            <ion-icon name="bag-outline"></ion-icon>
+                        </a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+</html>
