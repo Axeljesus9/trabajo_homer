@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="diseño.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/diseño.css')}}">
+    
     <title>Subasta</title>
 </head>
 <body>
@@ -32,9 +33,9 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/Designer.jpeg" class="d-block w-100" alt="Imagen de un diseñador">
+                <img src="{{ url_for('static', filename='image/file(1).jpg') }}" class="d-block w-100" alt="Imagen de un diseñador">
             </div>
-            <div class="carousel-item">
+            <div class="carousel-√çitem">
                 <img src="image/cuarta.jpeg" class="d-block w-100" alt="Paisaje tropical">
             </div>
             <div class="carousel-item">
@@ -115,7 +116,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="image/quinto_producto (editado.jpg" class="card-img-top img-fluid" alt="producto 5">
+                    <img src="image/quinto_producto editado.jpg" class="card-img-top img-fluid" alt="producto 5">
                     <div class="card-body text-center">
                         <p class="card-text">Hueso de San Andrés Bobola, Vilnius, Lituania</p>
                         <p class="card-text">Jesuita San Andrés Bobola de 1657</p>

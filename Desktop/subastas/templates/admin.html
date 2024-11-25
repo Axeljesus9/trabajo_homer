@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Subastas - Administrador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS personalizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Panel de Control - Administrador</h1>
+    </header>
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sección de perfil -->
+            <div class="col-md-3">
+                <div class="card admin-profile">
+                    <img src="{{ admin_image }}" class="card-img-top" alt="Administrador">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Administrador</h5>
+                        <p class="card-text">Control total del sistema de subastas.</p>
+                        <a href="#" class="btn btn-primary btn-sm">Editar Perfil</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección principal -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Acciones disponibles</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Gestión de subastas -->
+                            <div class="col-md-6 mb-4">
+                                <div class="action-box bg-light p-3 text-center">
+                                    <h6>Gestionar Subastas</h6>
+                                    <p>Crear, modificar o eliminar subastas.</p>
+                                    <a href="#" class="btn btn-primary btn-sm">Gestionar</a>
+                                </div>
+                            </div>
+
+                            <!-- Ver usuarios -->
+                            <div class="col-md-6 mb-4">
+                                <div class="action-box bg-light p-3 text-center">
+                                    <h6>Usuarios</h6>
+                                    <p>Visualizar y gestionar cuentas de usuarios.</p>
+                                    <a href="#" class="btn btn-primary btn-sm">Ver Usuarios</a>
+                                </div>
+                            </div>
+
+                            <!-- Reportes -->
+                            <div class="col-md-6 mb-4">
+                                <div class="action-box bg-light p-3 text-center">
+                                    <h6>Reportes</h6>
+                                    <p>Revisar estadísticas y actividad.</p>
+                                    <a href="#" class="btn btn-primary btn-sm">Ver Reportes</a>
+                                </div>
+                            </div>
+
+                            <!-- Configuración -->
+                            <div class="col-md-6 mb-4">
+                                <div class="action-box bg-light p-3 text-center">
+                                    <h6>Configuración</h6>
+                                    <p>Administrar configuraciones del sistema.</p>
+                                    <a href="#" class="btn btn-primary btn-sm">Configurar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
