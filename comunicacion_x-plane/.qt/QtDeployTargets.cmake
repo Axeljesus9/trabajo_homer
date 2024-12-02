@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_comunicacion_x_plane_FILE /Users/jesusaxelavilagrcia/comunicacion_x-plane/comunicacion_x_plane)
+set(__QT_DEPLOY_TARGET_comunicacion_x_plane_TYPE EXECUTABLE)
